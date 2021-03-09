@@ -5,7 +5,7 @@ import contactData from "./contactData";
 
 export default function App() {
   const cardComponent = contactData.map(function (contacts) {
-    return <ContactCard contact={contacts} />;
+    return <ContactCard contact={contacts} key={contacts.name} />;
   });
 
   return <div>{cardComponent}</div>;
